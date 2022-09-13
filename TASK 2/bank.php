@@ -18,22 +18,24 @@
 </body>
 </html>
 
-
 <?php
-
+ 
     if(isset($_POST['submit']))
     {
         $loan=$_POST['loan'];
         $years=$_POST['years'];
         
-        
         if($years<=3){
-            $monthlyinstallment = $loan*((0.10*pow((1+0.10),$years))/(pow((1+0.10),$years)-1));
+            $interst=$loan*0.10;
+            $num=$interst+$loan;
+            $monthlyinstallment = $num/($years*12);
             echo $monthlyinstallment;
         }
         else{
-            $monthlyinstallment = $loan*((0.15*pow((1+0.15),$years))/(pow((1+0.15),$years)-1));
-            echo "$monthlyinstallment";
+            $interst=$loan*0.15;
+            $num=$interst+$loan;
+            $monthlyinstallment = $num/($years*12);
+            echo $monthlyinstallment;
         }
 
     }
