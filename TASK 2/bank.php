@@ -37,7 +37,6 @@
             $monthlyinstallment = $num/($years*12);
             echo $monthlyinstallment;
         }
-
     }
    
 ?>
