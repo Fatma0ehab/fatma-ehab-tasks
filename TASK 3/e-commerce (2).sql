@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2022 at 12:26 AM
+-- Generation Time: Sep 24, 2022 at 09:59 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -224,6 +224,16 @@ CREATE TABLE `products` (
   `products_id` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`name`, `code`, `image`, `quentity`, `price`, `status`, `details_en`, `details_ar`, `created_at`, `updated_at`, `products_id`) VALUES
+('laptop', 123, 'data:image/jpeg;base64,/9j/4AAQS', 3, 10000, 1, 'Dell laptop Inspiron 15-3593 intel 10th Gen core i5-1035G1, 4GB Ram, 1TB HDD, Nvidia MX230 2GB Graph', '', '0000-00-00', '0000-00-00', 2),
+('iphone 13', 1234, 'https://www.apple.com/newsroom/i', 2, 50000, 1, '6.7-inch Super Retina XDR display with ProMotion for a faster, more responsive feel\r\nCinematic mode ', '', '0000-00-00', '0000-00-00', 3),
+('pepsi', 12345, 'https://cdnprod.mafretailproxy.c', 8, 10, 1, 'soft drinks may also contain caffeine, colorings, preservatives, and other ingredients', '', '0000-00-00', '0000-00-00', 4),
+('USB Flash Drive', 123456, 'https://s.alicdn.com/@sc04/kf/H0', 5, 800, 0, 'Low price usb 3.0 1gb 2gb 4gb 8 gb 16 gb 32gb 64gb usb flash drive with customized logo', '', '0000-00-00', '0000-00-00', 5);
+
 -- --------------------------------------------------------
 
 --
@@ -305,6 +315,13 @@ CREATE TABLE `users` (
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `email`, `password`, `phone`, `image`, `gender`, `verification_code`, `expired_at`, `status`, `email_verified_at`, `created_at`, `updated_at`) VALUES
+('12', 'Fatma', 'Ehab', 'fatmaa791@gmail.com', 'fatmaa12', 1112223334, '', 'f', 0, '0000-00-00', 0, '0000-00-00', '0000-00-00', '0000-00-00');
 
 --
 -- Indexes for dumped tables
